@@ -66,6 +66,7 @@ frontend/
 └─ README.md
 
 ---
+```
 
 ## ⚙️ Getting Started
 
