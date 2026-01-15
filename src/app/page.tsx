@@ -178,7 +178,7 @@ export default function Home() {
                   src="/ChatGPT Image Jan 14, 2026, 12_25_16 AM.png"
                   alt=""
                   fill
-                  style={{ objectFit: "contain", borderRadius: "10px" }}
+                  style={{ borderRadius: "10px" }}
                   priority
                 />
               </div>
