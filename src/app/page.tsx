@@ -177,8 +177,8 @@ export default function Home() {
                 style={{ position: "relative", width: "100%", height: "100%" }}
               >
                 <Image
-                  src="/ChatGPT Image Jan 14, 2026, 12_25_16 AM.png"
-                  alt=""
+                  src="/hero-image.png"
+                  alt="Hero Image"
                   fill
                   style={{ borderRadius: "10px" }}
                   priority
