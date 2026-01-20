@@ -21,6 +21,7 @@ export default function Home() {
 
     // Default to what was saved or system preference
     const currentTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(currentTheme);
     document.documentElement.setAttribute("data-theme", currentTheme);
   }, []);
