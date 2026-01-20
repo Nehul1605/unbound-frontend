@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import HowItWorks from "../components/HowItWorks";
 
 export default function Home() {
   const [theme, setTheme] = useState("light");
@@ -15,7 +16,7 @@ export default function Home() {
     // 1. Check Local Storage or System Preference
     const savedTheme = localStorage.getItem("theme");
     const systemPrefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
+      "(prefers-color-scheme: dark)",
     ).matches;
 
     // Default to what was saved or system preference
@@ -331,92 +332,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="how-it-works" id="working">
-        <div className="section-header">
-          <h2 className="section-title">How It Works</h2>
-          <p className="section-subtitle">
-            From PDF to interactive tutor in seconds
-          </p>
-        </div>
-        <div className="steps-grid">
-          {/* Step 1 */}
-          <div className="step-card">
-            <div className="step-icon-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="17 8 12 3 7 8" />
-                <line x1="12" y1="3" x2="12" y2="15" />
-              </svg>
-              <span className="step-badge">1</span>
-            </div>
-            <h3>Upload Content</h3>
-            <p>
-              Drag & drop your textbooks, lecture notes, or research papers.
-            </p>
-          </div>
-
-          {/* Step 2 */}
-          <div className="step-card">
-            <div className="step-icon-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M12 2a3 3 0 0 1 3 3v.2a6 6 0 0 1 5.2 9.8 4 4 0 0 1-1.7 4.2 6 6 0 0 1-6.5.9 4 4 0 0 1-1.6-4.6A6 6 0 0 1 6.8 6.4 3 3 0 0 1 12 2Z" />
-              </svg>
-              <span className="step-badge">2</span>
-            </div>
-            <h3>AI Analysis</h3>
-            <p>
-              Unbound analyzes structure, concepts, and generates a knowledge
-              graph.
-            </p>
-          </div>
-
-          {/* Step 3 */}
-          <div className="step-card">
-            <div className="step-icon-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-              </svg>
-              <span className="step-badge">3</span>
-            </div>
-            <h3>Start Learning</h3>
-            <p>
-              Chat with your book, take quizzes, and master the material deeply.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HowItWorks />
 
       {/* Pricing Section */}
       <section id="pricing" className="pricing">
