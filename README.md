@@ -48,7 +48,8 @@ Unbound:
 
 ## 📁 Project Structure
 
-final-frontend/
+```
+front-end/
 ├─ .github/
 │ └─ copilot-instructions.md
 ├─ public/

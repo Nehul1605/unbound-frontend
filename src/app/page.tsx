@@ -2,8 +2,10 @@
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [theme, setTheme] = useState("light");
   const [isAnnual, setIsAnnual] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
@@ -178,7 +180,7 @@ export default function Home() {
                   src="/ChatGPT Image Jan 14, 2026, 12_25_16 AM.png"
                   alt=""
                   fill
-                  style={{ objectFit: "contain", borderRadius: "10px" }}
+                  style={{ borderRadius: "10px" }}
                   priority
                 />
               </div>
@@ -509,11 +511,10 @@ export default function Home() {
             </ul>
             <a
               href="#footer-contact"
+              className="btn btn-secondary btn-full"
               onClick={(e) => smoothScroll(e, "#footer-contact")}
             >
-              <button className="btn btn-secondary btn-full">
-                Contact Sales
-              </button>
+              Contact Sales
             </a>
           </div>
         </div>
@@ -631,7 +632,10 @@ export default function Home() {
           <form
             id="auth-form"
             className="auth-form"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={(e) => {
+              e.preventDefault();
+              router.push("/dashboard");
+            }}
           >
             {/* Name field (hidden by default for login) */}
             {isSignUp && (
